@@ -65,7 +65,7 @@ export default function FooterPage() {
 				</div>
 
 				{/* Right — Logo */}
-				<div className="flex justify-center">
+				<div className=" justify-center hidden md:block">
 					<Image
 						src="https://0hf60dalcz7wrhli.public.blob.vercel-storage.com/shreem-images/_shreem_software_solutions__1_-removebg-preview.webp"
 						alt="Shreem Software Solutions Logo"

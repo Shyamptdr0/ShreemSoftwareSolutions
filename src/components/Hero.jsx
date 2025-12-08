@@ -95,28 +95,33 @@ export default function HeroPage() {
 	const projects = [
 		{
 			id: 1,
-			title: "Kapdo Ki Duniya ( E-Commerce Website )",
+			title: "School Website",
 			description:
-				"A scalable online shopping platform with secure payment integration and a smooth user experience.",
+				"A modern and responsive school management website with admin panel and student portal.",
 			image: "https://0hf60dalcz7wrhli.public.blob.vercel-storage.com/shreem-images/7.png",
 			features: [
-				"Android and iOS app for customer",
-				"Android and iOS app for Seller/Delivery boy",
-				"Master Admin",
-				"Website",
+				"Responsive and SEO-friendly design",
+				"Student and teacher portal with login access",
+				"Admin panel for managing admissions, results, and notices",
+				"Event gallery & latest announcements section",
+				"Online admission form and contact system"
 			],
 		},
 		{
 			id: 2,
-			title: "Multi Vendor Ecommerce APP & Website",
+			title: "Creative Homes",
 			description:
-				"Build your own Ecommerce app just like Amazon & Flipkart. Includes Android/iOS apps, Master Admin, and Website.",
+				"Creative Homes is a smart real-estate platform that helps users explore, book, and manage properties with ease.",
 			image: "https://0hf60dalcz7wrhli.public.blob.vercel-storage.com/shreem-images/8.png",
 			features: [
-				"Android and iOS app for customer",
-				"Android and iOS app for Seller/Delivery boy",
-				"Master Admin",
-				"Website",
+				"Property listing with photos, amenities & pricing",
+				"Builder/Agent dashboard",
+				"Customer dashboard with saved properties",
+				"Project gallery & highlights",
+				"Instant enquiry notifications",
+				"Admin panel for full control",
+				"Map view for locations",
+				"Secure, scalable backend API",
 			],
 		},
 		{
@@ -241,15 +246,28 @@ export default function HeroPage() {
 					Book Free Consultation
 				</Button>
 
-				<div className="flex justify-center">
-					<Image
-						src="https://0hf60dalcz7wrhli.public.blob.vercel-storage.com/shreem-images/Hero-banner.png"
-						alt="Shreem Software Solutions Illustration"
-						width={900}
-						height={900}
-						className="object-contain drop-shadow-2xl float-soft transition-transform duration-500 ease-out hover:scale-105"
-					/>
+				<div className="flex justify-center px-4 md:px-0 mt-4 md:mt-5">
+					<div className="w-full max-w-[700px] md:max-w-[900px]">
+						<Image
+							src="https://0hf60dalcz7wrhli.public.blob.vercel-storage.com/shreem-images/Hero-banner.png"
+							alt="Shreem Software Solutions Illustration"
+							width={950}
+							height={950}
+							className="
+        w-full h-auto
+        object-contain
+        drop-shadow-2xl
+        float-soft
+        transition-transform
+        duration-500
+        ease-out
+        hover:scale-105
+      "
+							priority
+						/>
+					</div>
 				</div>
+
 			</div>
 			<div className="max-w-6xl mx-auto px-6 mt-28 grid md:grid-cols-2 gap-14 items-start">
 				<div className="space-y-6">
@@ -330,10 +348,10 @@ export default function HeroPage() {
 							<AnimatePresence mode="wait">
 								<motion.div
 									key={project.title}
-									initial={{ opacity: 0 }}
-									animate={{ opacity: 1 }}
-									exit={{ opacity: 0 }}
-									transition={{ duration: 0.5 }}
+									initial={{opacity: 0}}
+									animate={{opacity: 1}}
+									exit={{opacity: 0}}
+									transition={{duration: 0.5}}
 									className="relative w-full h-full"
 								>
 									{project.image ? (
@@ -384,7 +402,8 @@ export default function HeroPage() {
 											}}
 										/>
 									) : (
-										<div className="flex items-center justify-center h-64 w-full bg-gray-200 text-gray-400">
+										<div
+											className="flex items-center justify-center h-64 w-full bg-gray-200 text-gray-400">
 											Image Coming Soon
 										</div>
 									)}
@@ -397,10 +416,10 @@ export default function HeroPage() {
 							<AnimatePresence mode="wait">
 								<motion.div
 									key={project.title}
-									initial={{ opacity: 0, x: 40 }}
-									animate={{ opacity: 1, x: 0 }}
-									exit={{ opacity: 0, x: -40 }}
-									transition={{ duration: 0.5 }}
+									initial={{opacity: 0, x: 40}}
+									animate={{opacity: 1, x: 0}}
+									exit={{opacity: 0, x: -40}}
+									transition={{duration: 0.5}}
 								>
 									<h2 className="text-4xl md:text-5xl font-extrabold text-black/85">
 										{project.title}
@@ -416,7 +435,8 @@ export default function HeroPage() {
 										))}
 									</ul>
 
-									<button className="mt-6 bg-black text-white px-6 py-3 rounded-xl hover:bg-gray-800 transition cursor-pointer">
+									<button
+										className="mt-6 bg-black text-white px-6 py-3 rounded-xl hover:bg-gray-800 transition cursor-pointer">
 										BOOK FREE CONSULTATION
 									</button>
 								</motion.div>
@@ -431,22 +451,22 @@ export default function HeroPage() {
 			{/* ============================================= */}
 			{/*           FULL SERVICES SECTION             */}
 			{/* ============================================= */}
-			<div className="max-w-6xl mx-auto px-6 mt-32">
-				<h2 className="text-4xl md:text-5xl font-extrabold text-black/85 text-center">
-					Our Services
-				</h2>
+			{/*<div className="max-w-6xl mx-auto px-6 mt-32">*/}
+			{/*	<h2 className="text-4xl md:text-5xl font-extrabold text-black/85 text-center">*/}
+			{/*		Our Services*/}
+			{/*	</h2>*/}
 
-				<div className="mt-12 grid md:grid-cols-3 gap-8">
-					{services.map((item, index) => (
-						<div key={index}
-						     className="p-6 bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300 text-center">
-							<item.icon className="text-blue-600 mb-4 mx-auto" size={36}/>
-							<h3 className="text-xl font-semibold">{item.title}</h3>
-							<p className="text-gray-600 text-sm mt-2">{item.desc}</p>
-						</div>
-					))}
-				</div>
-			</div>
+			{/*	<div className="mt-12 grid md:grid-cols-3 gap-8">*/}
+			{/*		{services.map((item, index) => (*/}
+			{/*			<div key={index}*/}
+			{/*			     className="p-6 bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300 text-center">*/}
+			{/*				<item.icon className="text-blue-600 mb-4 mx-auto" size={36}/>*/}
+			{/*				<h3 className="text-xl font-semibold">{item.title}</h3>*/}
+			{/*				<p className="text-gray-600 text-sm mt-2">{item.desc}</p>*/}
+			{/*			</div>*/}
+			{/*		))}*/}
+			{/*	</div>*/}
+			{/*</div>*/}
 
 			{/* ============================================= */}
 			{/*           TECHNOLOGIES WE USE SECTION       */}
@@ -479,38 +499,37 @@ export default function HeroPage() {
 				<h2 className="text-3xl md:text-4xl font-extrabold text-black/85">
 					What will you get in this <br/> Website Plan?
 				</h2>
-				<p className="text-gray-500 mt-2 max-w-xl mx-auto font-inter">
+				<p className="text-gray-500 mt-2 max-w-xl mx-auto px-4 font-inter">
 					Inside this plan, you will get all these deliverables with which you can make your business online
 					and grow it professionally.
 				</p>
 
 				{/* Card */}
 				<div
-					className="max-w-sm mx-auto bg-black text-white rounded-2xl shadow-lg border border-gray-800 p-8 flex flex-col items-center text-center transition-transform hover:-translate-y-2 hover:shadow-2xl duration-300 mt-8">
+					className="max-w-sm mx-5 md:mx-auto  bg-black text-white rounded-2xl shadow-lg border
+					border-gray-800 p-8 flex flex-col items-center
+					transition-transform hover:-translate-y-2 hover:shadow-2xl duration-300 mt-8">
 
-					<h3 className="text-2xl font-bold mb-4 flex items-center gap-2">
+					<h3 className="text-2xl font-bold mb-4 flex items-center gap-2 text-start">
 						Custom Website Plan
 
 					</h3>
 
 					{/* Features List */}
-					<ul className="mb-6 space-y-3 text-left w-full">
-						{features.map((feature, index) => (
-							<li key={index} className="flex items-center gap-3">
+					<div>
+						<ul className="mb-6 space-y-3 text-left w-full">
+							{features.map((feature, index) => (
+								<li key={index} className="flex items-center gap-3">
               <span
 	              className="w-5 h-5  rounded-full flex-shrink-0 flex items-center justify-center text-white text-xs font-bold">
                 ✓
               </span>
-								<span className="text-white text-sm">{feature}</span>
-							</li>
-						))}
-					</ul>
+									<span className="text-white text-sm">{feature}</span>
+								</li>
+							))}
+						</ul>
+					</div>
 
-					{/* Price */}
-					{/*<div className="mb-6">*/}
-					{/*	<span className="text-4xl font-extrabold">₹25,000</span>*/}
-					{/*	<span className="text-gray-300 text-sm ml-1">for lifetime</span>*/}
-					{/*</div>*/}
 
 					{/* CTA Button */}
 					<Button
