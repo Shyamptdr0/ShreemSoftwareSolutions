@@ -45,7 +45,7 @@ export default function FooterPage() {
 
 						{/* Instagram */}
 						<a
-							href="https://instagram.com/shreem_softwaresolutions"
+							href="https://www.instagram.com/shreemsoftwaresolutions/"
 							target="_blank"
 							className="flex items-center gap-3 bg-white text-black px-5 py-3 rounded-2xl shadow-lg transition hover:bg-gray-100"
 						>
@@ -65,15 +65,25 @@ export default function FooterPage() {
 				</div>
 
 				{/* Right — Logo */}
-				<div className=" justify-center hidden md:block">
+				<div className="hidden md:flex justify-center items-center flex-1">
 					<Image
-						src="https://0hf60dalcz7wrhli.public.blob.vercel-storage.com/shreem-images/_shreem_software_solutions__1_-removebg-preview.webp"
+						src="https://0hf60dalcz7wrhli.public.blob.vercel-storage.com/shreem-images/footer-banner.png"
 						alt="Shreem Software Solutions Logo"
-						width={900}
-						height={900}
-						className="w-auto"
+						width={1600}
+						height={1600}
+						className="
+      w-full
+      max-w-[900px]    /* BIG IMAGE */
+      lg:max-w-[1100px]
+      xl:max-w-[1300px]
+      object-contain
+      scale-110         /* makes it EVEN BIGGER */
+      -mr-20            /* move more to the right */
+    "
 					/>
 				</div>
+
+
 
 			</div>
 

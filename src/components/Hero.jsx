@@ -225,7 +225,7 @@ export default function HeroPage() {
 							<p className="text-xs text-gray-600">Chat with us</p>
 						</div>
 					</a>
-					<a href="https://instagram.com/shreem_softwaresolutions" target="_blank"
+					<a href="https://www.instagram.com/shreemsoftwaresolutions/" target="_blank"
 					   className="flex items-center gap-3 bg-white text-black px-5 py-3 rounded-2xl shadow-lg transition hover:bg-gray-100">
 						<div
 							className="w-10 h-10 rounded-xl bg-gradient-to-tr from-pink-500 to-purple-600 flex items-center justify-center">
@@ -242,9 +242,12 @@ export default function HeroPage() {
 				</div>
 
 				<Button
-					className="mt-15 px-10 py-7 text-lg font-semibold rounded-2xl bg-blue-600 text-white shadow-md hover:shadow-xl hover:bg-blue-700 hover:-translate-y-1 active:scale-95 transition-all duration-300 cursor-pointer">
+					onClick={() => window.open("https://wa.me/917000000000", "_blank")}
+					className="mt-15 px-10 py-7 text-lg font-semibold rounded-2xl bg-blue-600 text-white shadow-md hover:shadow-xl hover:bg-blue-700 hover:-translate-y-1 active:scale-95 transition-all duration-300 cursor-pointer"
+				>
 					Book Free Consultation
 				</Button>
+
 
 				<div className="flex justify-center px-4 md:px-0 mt-4 md:mt-5">
 					<div className="w-full max-w-[700px] md:max-w-[900px]">
@@ -436,6 +439,7 @@ export default function HeroPage() {
 									</ul>
 
 									<button
+										onClick={() => window.open("https://wa.me/917000000000", "_blank")}
 										className="mt-6 bg-black text-white px-6 py-3 rounded-xl hover:bg-gray-800 transition cursor-pointer">
 										BOOK FREE CONSULTATION
 									</button>
@@ -533,6 +537,7 @@ export default function HeroPage() {
 
 					{/* CTA Button */}
 					<Button
+						onClick={() => window.open("https://wa.me/917000000000", "_blank")}
 						className=" cursor-pointer px-8 py-4 bg-white text-black text-lg font-semibold rounded-full shadow-md hover:bg-gray-200 hover:shadow-xl transition-all duration-300">
 						Book Free Consultation
 					</Button>
