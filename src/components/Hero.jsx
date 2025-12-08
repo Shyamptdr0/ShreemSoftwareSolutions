@@ -320,140 +320,110 @@ export default function HeroPage() {
 			</div>
 
 
-			<div className="mx-auto px-6 mt-32 max-w-[1200px]">
-				<div className="flex flex-col md:flex-row items-center gap-10">
-					{/* Left Image */}
-					<div className="w-full md:w-1/2 rounded-2xl overflow-hidden">
-						<AnimatePresence mode="wait">
-							<motion.div
-								key={project.title}
-								initial={{opacity: 0}}
-								animate={{opacity: 1}}
-								exit={{opacity: 0}}
-								transition={{duration: 0.5}}
-								className="relative w-full h-full"
-							>
-								{project.image ? (
-									<img
-										src={project.image}
-										alt={project.title}
-										className="object-cover w-full h-full rounded-md transition-all duration-300 ease-out"
-										style={{
-											transform: "perspective(800px) rotateX(0deg) rotateY(0deg) scale(1)",
-											willChange: "transform, box-shadow",
-										}}
-										onMouseMove={(e) => {
-											const rect = e.currentTarget.getBoundingClientRect();
-											const x = e.clientX - rect.left;
-											const y = e.clientY - rect.top;
+			<div className="mx-auto px-6 mt-32 max-w-[1200px] space-y-24">
 
-											const centerX = rect.width / 2;
-											const centerY = rect.height / 2;
+				{projects.map((project, index) => (
+					<div key={index} className="flex flex-col md:flex-row items-center gap-10">
 
-											// 3D Rotation
-											const rotateX = ((y - centerY) / centerY) * 12;
-											const rotateY = ((x - centerX) / centerX) * 12;
+						{/* Left Image */}
+						<div className="w-full md:w-1/2 rounded-2xl overflow-hidden">
+							<AnimatePresence mode="wait">
+								<motion.div
+									key={project.title}
+									initial={{ opacity: 0 }}
+									animate={{ opacity: 1 }}
+									exit={{ opacity: 0 }}
+									transition={{ duration: 0.5 }}
+									className="relative w-full h-full"
+								>
+									{project.image ? (
+										<img
+											src={project.image}
+											alt={project.title}
+											className="object-cover w-full h-full rounded-md transition-all duration-300 ease-out"
+											style={{
+												transform: "perspective(800px) rotateX(0deg) rotateY(0deg) scale(1)",
+												willChange: "transform, box-shadow",
+											}}
+											onMouseMove={(e) => {
+												const rect = e.currentTarget.getBoundingClientRect();
+												const x = e.clientX - rect.left;
+												const y = e.clientY - rect.top;
 
-											// Glare position
-											const glareX = (x / rect.width) * 100;
-											const glareY = (y / rect.height) * 100;
+												const centerX = rect.width / 2;
+												const centerY = rect.height / 2;
 
-											e.currentTarget.style.transform = `
-            perspective(800px)
-            rotateX(${-rotateX}deg)
-            rotateY(${rotateY}deg)
-            scale(1.03)
-        `;
+												const rotateX = ((y - centerY) / centerY) * 12;
+												const rotateY = ((x - centerX) / centerX) * 12;
 
-											// Soft shadow following cursor
-											e.currentTarget.style.boxShadow = `${rotateY}px ${-rotateX}px 40px rgba(0,0,0,0.25)`;
+												const glareX = (x / rect.width) * 100;
+												const glareY = (y / rect.height) * 100;
 
-											// Glare light effect
-											e.currentTarget.style.background = `
-            radial-gradient(
-                circle at ${glareX}% ${glareY}%,
-                rgba(255,255,255,0.45),
-                transparent 60%
-            )
-        `;
-										}}
-										onMouseLeave={(e) => {
-											e.currentTarget.style.transform =
-												"perspective(800px) rotateX(0deg) rotateY(0deg) scale(1)";
-											e.currentTarget.style.boxShadow = "0px 0px 20px rgba(0,0,0,0.15)";
-											e.currentTarget.style.background = "transparent";
-										}}
-									/>
+												e.currentTarget.style.transform = `
+                                        perspective(800px)
+                                        rotateX(${-rotateX}deg)
+                                        rotateY(${rotateY}deg)
+                                        scale(1.03)
+                                    `;
 
+												e.currentTarget.style.boxShadow = `${rotateY}px ${-rotateX}px 40px rgba(0,0,0,0.25)`;
 
-								) : (
-									<div
-										className="flex items-center justify-center h-64 w-full bg-gray-200 text-gray-400">
-										Image Coming Soon
-									</div>
-								)}
-							</motion.div>
-						</AnimatePresence>
+												e.currentTarget.style.background = `
+                                        radial-gradient(
+                                            circle at ${glareX}% ${glareY}%,
+                                            rgba(255,255,255,0.45),
+                                            transparent 60%
+                                        )
+                                    `;
+											}}
+											onMouseLeave={(e) => {
+												e.currentTarget.style.transform =
+													"perspective(800px) rotateX(0deg) rotateY(0deg) scale(1)";
+												e.currentTarget.style.boxShadow = "0px 0px 20px rgba(0,0,0,0.15)";
+												e.currentTarget.style.background = "transparent";
+											}}
+										/>
+									) : (
+										<div className="flex items-center justify-center h-64 w-full bg-gray-200 text-gray-400">
+											Image Coming Soon
+										</div>
+									)}
+								</motion.div>
+							</AnimatePresence>
+						</div>
+
+						{/* Right Text */}
+						<div className="w-full md:w-1/2 text-start">
+							<AnimatePresence mode="wait">
+								<motion.div
+									key={project.title}
+									initial={{ opacity: 0, x: 40 }}
+									animate={{ opacity: 1, x: 0 }}
+									exit={{ opacity: 0, x: -40 }}
+									transition={{ duration: 0.5 }}
+								>
+									<h2 className="text-4xl md:text-5xl font-extrabold text-black/85">
+										{project.title}
+									</h2>
+
+									<p className="mt-4 text-gray-600 font-inter">
+										{project.description}
+									</p>
+
+									<ul className="mt-4 list-disc list-inside text-gray-500 font-inter">
+										{project.features.map((feature, idx) => (
+											<li key={idx}>{feature}</li>
+										))}
+									</ul>
+
+									<button className="mt-6 bg-black text-white px-6 py-3 rounded-xl hover:bg-gray-800 transition cursor-pointer">
+										BOOK FREE CONSULTATION
+									</button>
+								</motion.div>
+							</AnimatePresence>
+						</div>
 					</div>
-
-					{/* Right Text */}
-					<div className="w-full md:w-1/2 text-start">
-						<AnimatePresence mode="wait">
-							<motion.div
-								key={project.title}
-								variants={variants}
-								initial="enter"
-								animate="center"
-								exit="exit"
-								transition={{duration: 0.5}}
-							>
-								<h2 className="text-4xl md:text-5xl font-extrabold text-black/85">{project.title}</h2>
-								<p className="mt-4 text-gray-600 font-inter">{project.description}</p>
-								<ul className="mt-4 list-disc list-inside text-gray-500 font-inter">
-									{project.features.map((feature, idx) => (
-										<li key={idx}>{feature}</li>
-									))}
-								</ul>
-
-								<button
-									className="mt-6 bg-black text-white px-6 py-3 rounded-xl hover:bg-gray-800 transition cursor-pointer">
-									BOOK FREE CONSULTATION
-								</button>
-							</motion.div>
-						</AnimatePresence>
-					</div>
-				</div>
-
-				{/* Navigation Buttons */}
-				<div className="flex justify-center gap-6 mt-12">
-					<button
-						onClick={prevProject}
-						className="cursor-pointer p-4 px-10 rounded-lg bg-white/70 backdrop-blur-md shadow-[0px_4px_20px_rgba(0,0,0,0.1)]
-		border border-white/40
-		hover:bg-white hover:scale-110 active:scale-95
-		transition-all duration-300 group"
-					>
-		<span
-			className="text-xl font-bold text-gray-700 group-hover:text-black transition-all duration-300"
-		>
-			←
-		</span>
-					</button>
-
-					<button
-						onClick={nextProject}
-						className="cursor-pointer p-4 px-10 rounded-lg bg-white/70 backdrop-blur-md shadow-[0px_4px_20px_rgba(0,0,0,0.1)]
-		border border-white/40
-		hover:bg-white hover:scale-110 active:scale-95
-		transition-all duration-300 group"
-					>
-		<span
-			className="text-xl font-bold text-gray-700 group-hover:text-black transition-all duration-300"
-		>
-			→
-		</span>
-					</button>
-				</div>
+				))}
 
 			</div>
 
