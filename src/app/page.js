@@ -4,7 +4,7 @@ import HeroPage from "@/components/Hero";
 
 export default function Home() {
 	return (
-		<main className="scroll-smooth min-h-screen relative">
+		<main className="scroll-smooth min-h-screen ">
 			<HeaderPage />
 			<HeroPage />
 

@@ -183,7 +183,7 @@ export default function HeroPage() {
 		<div className=" pt-10 md:pt-32 pb-20">
 
 			{/* ------------ FLOATING DECORATIVE IMAGES ------------- */}
-			<div className="hidden md:block">
+			<div className="hidden md:block ">
 				<Image src="https://0hf60dalcz7wrhli.public.blob.vercel-storage.com/shreem-images/scribble.png"
 				       alt="Decor" width={80} height={80} className="absolute top-20 left-10 opacity-70 float-soft"/>
 				<Image src="https://0hf60dalcz7wrhli.public.blob.vercel-storage.com/shreem-images/paper-plane.png"
@@ -192,7 +192,7 @@ export default function HeroPage() {
 				       alt="Decor" width={90} height={90} className="absolute top-40 right-10 opacity-70 float-soft"/>
 				<Image src="https://0hf60dalcz7wrhli.public.blob.vercel-storage.com/shreem-images/ux-design.png"
 				       alt="Decor" width={90} height={90}
-				       className="absolute bottom-28 right-20 opacity-70 float-soft"/>
+				       className="absolute bottom-25 right-20 opacity-70 float-soft"/>
 				<Image src="https://0hf60dalcz7wrhli.public.blob.vercel-storage.com/shreem-images/game-development.png"
 				       alt="Decor" width={100} height={100}
 				       className="absolute bottom-16 left-24 opacity-70 float-soft"/>
