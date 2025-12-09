@@ -1,5 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+	output: "export", // ✅ REQUIRED for next export behavior
 	reactCompiler: true,
 
 	images: {

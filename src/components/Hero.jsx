@@ -184,21 +184,21 @@ export default function HeroPage() {
 
 			{/* ------------ FLOATING DECORATIVE IMAGES ------------- */}
 			<div className="hidden md:block ">
-				<Image src="https://0hf60dalcz7wrhli.public.blob.vercel-storage.com/shreem-images/scribble.png"
+				<img src="https://0hf60dalcz7wrhli.public.blob.vercel-storage.com/shreem-images/scribble.png"
 				       alt="Decor" width={80} height={80} className="absolute top-20 left-10 opacity-70 float-soft"/>
-				<Image src="https://0hf60dalcz7wrhli.public.blob.vercel-storage.com/shreem-images/paper-plane.png"
+				<img src="https://0hf60dalcz7wrhli.public.blob.vercel-storage.com/shreem-images/paper-plane.png"
 				       alt="Decor" width={90} height={90} className="absolute top-54 left-20 opacity-70 float-soft"/>
-				<Image src="https://0hf60dalcz7wrhli.public.blob.vercel-storage.com/shreem-images/responsive.png"
+				<img src="https://0hf60dalcz7wrhli.public.blob.vercel-storage.com/shreem-images/responsive.png"
 				       alt="Decor" width={90} height={90} className="absolute top-40 right-10 opacity-70 float-soft"/>
-				<Image src="https://0hf60dalcz7wrhli.public.blob.vercel-storage.com/shreem-images/ux-design.png"
+				<img src="https://0hf60dalcz7wrhli.public.blob.vercel-storage.com/shreem-images/ux-design.png"
 				       alt="Decor" width={90} height={90}
 				       className="absolute bottom-25 right-20 opacity-70 float-soft"/>
-				<Image src="https://0hf60dalcz7wrhli.public.blob.vercel-storage.com/shreem-images/game-development.png"
+				<img src="https://0hf60dalcz7wrhli.public.blob.vercel-storage.com/shreem-images/game-development.png"
 				       alt="Decor" width={100} height={100}
 				       className="absolute bottom-16 left-24 opacity-70 float-soft"/>
-				<Image src="https://0hf60dalcz7wrhli.public.blob.vercel-storage.com/shreem-images/light-bulb.png"
+				<img src="https://0hf60dalcz7wrhli.public.blob.vercel-storage.com/shreem-images/light-bulb.png"
 				       alt="Decor" width={80} height={80} className="absolute top-1/2 right-40 opacity-70 float-soft"/>
-				<Image src="https://0hf60dalcz7wrhli.public.blob.vercel-storage.com/shreem-images/coding.png"
+				<img src="https://0hf60dalcz7wrhli.public.blob.vercel-storage.com/shreem-images/coding.png"
 				       alt="Decor" width={100} height={100} className="absolute top-1/2 left-40 opacity-70 float-soft"/>
 
 			</div>
