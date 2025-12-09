@@ -251,7 +251,7 @@ export default function HeroPage() {
 
 				<div className="flex justify-center px-4 md:px-0 mt-4 md:mt-5">
 					<div className="w-full max-w-[700px] md:max-w-[900px]">
-						<Image
+						<img
 							src="https://0hf60dalcz7wrhli.public.blob.vercel-storage.com/shreem-images/Hero-banner.png"
 							alt="Shreem Software Solutions Illustration"
 							width={950}
