@@ -205,14 +205,14 @@ export default function HeroPage() {
 			{/* ------------- MAIN HERO CONTENT ------------- */}
 			<div className="relative z-10 max-w-6xl mx-auto px-6 flex flex-col items-center text-center">
 				<h1 className="text-[40px] md:text-6xl font-extrabold tracking-tight text-black/85 leading-tight">
-					Build Your First Custom Website <br/> With Us
+					Build Your First Custom Software Solution With Us
 				</h1>
 				<p className="mt-5 text-lg md:text-xl text-gray-600 max-w-2xl leading-relaxed">
 					Want to launch a website for your startup or business? Book a free consultation today and let’s
 					build your digital presence together.
 				</p>
 				<div className="flex gap-4 mt-5 flex-wrap">
-					<a href="https://wa.me/917000000000" target="_blank"
+					<a href="https://wa.me/918085202613" target="_blank"
 					   className="flex items-center gap-3 bg-white text-black px-5 py-3 rounded-2xl shadow-lg transition hover:bg-gray-100">
 						<div className="w-10 h-10 rounded-xl bg-green-500 flex items-center justify-center">
 							<svg width="22" height="22" fill="#fff" viewBox="0 0 24 24">
@@ -242,7 +242,7 @@ export default function HeroPage() {
 				</div>
 
 				<Button
-					onClick={() => window.open("https://wa.me/917000000000", "_blank")}
+					onClick={() => window.open("https://wa.me/918085202613", "_blank")}
 					className="mt-15 px-10 py-7 text-lg font-semibold rounded-2xl bg-blue-600 text-white shadow-md hover:shadow-xl hover:bg-blue-700 hover:-translate-y-1 active:scale-95 transition-all duration-300 cursor-pointer"
 				>
 					Book Free Consultation
@@ -439,7 +439,7 @@ export default function HeroPage() {
 									</ul>
 
 									<button
-										onClick={() => window.open("https://wa.me/917000000000", "_blank")}
+										onClick={() => window.open("https://wa.me/918085202613", "_blank")}
 										className="mt-6 bg-black text-white px-6 py-3 rounded-xl hover:bg-gray-800 transition cursor-pointer">
 										BOOK FREE CONSULTATION
 									</button>
@@ -475,28 +475,33 @@ export default function HeroPage() {
 			{/* ============================================= */}
 			{/*           TECHNOLOGIES WE USE SECTION       */}
 			{/* ============================================= */}
-			<div className="max-w-6xl mx-auto px-6 mt-32 text-center">
-				<h2 className="text-4xl md:text-5xl font-extrabold text-black/85 text-center">
-					Technologies We Use
-				</h2>
+			<section className="bg-blue-50 py-24 mt-30">
+				<div className="max-w-6xl mx-auto px-6 text-center">
+					{/* Heading */}
+					<h2 className="text-4xl md:text-5xl font-extrabold text-gray-900">
+						Technologies We Use
+					</h2>
+					<p className="text-gray-600 mt-3 md:text-lg">
+						Powerful tools that drive our modern development workflow
+					</p>
 
-				<div className="relative overflow-hidden mt-12">
-					<Marquee pauseOnHover speed={80}>
-						<div className="flex gap-4 min-w-max">
-							{technologies.map((tech) => (
-								<TechCard key={tech.name} {...tech} />
-							))}
-						</div>
-					</Marquee>
+					{/* Marquee Container */}
+					<div className="relative overflow-hidden mt-16">
+						<Marquee pauseOnHover speed={60} className="py-4">
+							<div className="flex gap-8 min-w-max">
+								{technologies.map((tech) => (
+									<TechCard key={tech.name} {...tech} />
+								))}
+							</div>
+						</Marquee>
 
-					{/* Gradient overlays */}
-					<div
-						className="pointer-events-none absolute inset-y-0 left-0 w-1/12 bg-gradient-to-r from-white"></div>
-					<div
-						className="pointer-events-none absolute inset-y-0 right-0 w-1/12 bg-gradient-to-l from-white"></div>
+						{/* Soft Gradient Sides */}
+						<div className="absolute inset-y-0 left-0 w-20 bg-gradient-to-r from-blue-50 to-transparent pointer-events-none"></div>
+						<div className="absolute inset-y-0 right-0 w-20 bg-gradient-to-l from-blue-50 to-transparent pointer-events-none"></div>
+					</div>
 				</div>
+			</section>
 
-			</div>
 
 			<div className="mt-15 text-center">
 				{/* Heading & Subtext */}
@@ -537,7 +542,7 @@ export default function HeroPage() {
 
 					{/* CTA Button */}
 					<Button
-						onClick={() => window.open("https://wa.me/917000000000", "_blank")}
+						onClick={() => window.open("https://wa.me/918085202613", "_blank")}
 						className=" cursor-pointer px-8 py-4 bg-white text-black text-lg font-semibold rounded-full shadow-md hover:bg-gray-200 hover:shadow-xl transition-all duration-300">
 						Book Free Consultation
 					</Button>
