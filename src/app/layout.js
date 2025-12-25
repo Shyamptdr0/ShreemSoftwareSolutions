@@ -1,4 +1,5 @@
 import { Plus_Jakarta_Sans, Inter } from "next/font/google";
+import Script from "next/script";
 import Loader from "@/components/Loader";
 import "./globals.css";
 
@@ -37,10 +38,9 @@ export const metadata = {
 		"web application development",
 		"SaaS development",
 		"API development",
-		"software company near me"
+		"software company near me",
 	],
 
-	// ⭐ All favicon + icons added here
 	icons: {
 		icon: [
 			{
@@ -62,20 +62,6 @@ export const metadata = {
 			url: "https://0hf60dalcz7wrhli.public.blob.vercel-storage.com/shreem-images/apple-touch-icon.png",
 			sizes: "180x180",
 		},
-		other: [
-			{
-				rel: "android-chrome",
-				url: "https://0hf60dalcz7wrhli.public.blob.vercel-storage.com/shreem-images/android-chrome-192x192.png",
-				sizes: "192x192",
-				type: "image/png",
-			},
-			{
-				rel: "android-chrome",
-				url: "https://0hf60dalcz7wrhli.public.blob.vercel-storage.com/shreem-images/android-chrome-512x512.png",
-				sizes: "512x512",
-				type: "image/png",
-			},
-		],
 	},
 
 	openGraph: {
@@ -87,6 +73,7 @@ export const metadata = {
 		locale: "en_IN",
 		type: "website",
 	},
+
 	robots: {
 		index: true,
 		follow: true,
@@ -96,8 +83,24 @@ export const metadata = {
 export default function RootLayout({ children }) {
 	return (
 		<html lang="en">
+		<head>
+			{/* Google Analytics */}
+			<Script
+				src="https://www.googletagmanager.com/gtag/js?id=G-RS84WX1018"
+				strategy="afterInteractive"
+			/>
+			<Script id="google-analytics" strategy="afterInteractive">
+				{`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-RS84WX1018');
+          `}
+			</Script>
+		</head>
+
 		<body
-			className={`${plusJakarta.variable} ${inter.variable} inter.variable antialiased bg-primary-gradient`}
+			className={`${plusJakarta.variable} ${inter.variable} antialiased bg-primary-gradient`}
 		>
 		<Loader>{children}</Loader>
 		</body>
