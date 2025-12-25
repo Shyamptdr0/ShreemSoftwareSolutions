@@ -89,7 +89,6 @@ export default function HeroPage() {
 		"Free SSL Certificate (Lifetime)",
 		"Custom Design for Your Business",
 		"Responsive Website (Mobile & Desktop)",
-		"Support for 6 Months",
 	];
 
 	const projects = [
@@ -148,6 +147,21 @@ export default function HeroPage() {
 				"Responsive design (mobile-friendly)",
 				"Admin panel for order management",
 				"Inventory management"
+			],
+		},
+		{
+			id: 5,
+			title: "Restaurant Billing & POS Software",
+			description:
+				"A fast, reliable restaurant billing and POS system designed to manage orders, billing, inventory, and reports with an easy-to-use interface.",
+			image:
+				"https://0hf60dalcz7wrhli.public.blob.vercel-storage.com/shreem-images/6.png",
+			features: [
+				"Quick bill generation (Dine-in, Takeaway, Delivery)",
+				"GST-compliant invoices with print support",
+				"Menu & price management",
+				"Inventory & stock tracking",
+				"Sales, tax & profit reports dashboard"
 			],
 		},
 	];
