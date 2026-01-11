@@ -27,7 +27,7 @@ export default function FooterPage() {
 
 						{/* WhatsApp */}
 						<a
-							href="https://wa.me/918085202613"
+							href="https://wa.me/916263662870"
 							target="_blank"
 							className="flex items-center gap-3 bg-white text-black px-5 py-3 rounded-2xl shadow-lg transition hover:bg-gray-100"
 						>
@@ -66,8 +66,8 @@ export default function FooterPage() {
 
 				{/* Right — Logo */}
 				<div className="hidden md:flex justify-center items-center flex-1">
-					<img
-						src="https://0hf60dalcz7wrhli.public.blob.vercel-storage.com/shreem-images/footer-banner.png"
+					<Image
+						src="/footer-banner.webp"
 						alt="Shreem Software Solutions Logo"
 						width={1600}
 						height={1600}

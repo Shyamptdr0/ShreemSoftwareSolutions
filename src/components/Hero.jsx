@@ -1,9 +1,9 @@
 "use client";
 
-import React, {useState} from "react";
+import React, { useState } from "react";
 import Image from "next/image";
-import {Button} from "@/components/ui/button";
-import {motion, AnimatePresence} from "framer-motion";
+import { Button } from "@/components/ui/button";
+import { motion, AnimatePresence } from "framer-motion";
 import {
 	Monitor,
 	BarChart3,
@@ -18,8 +18,8 @@ import {
 	Megaphone,
 	Layers,
 } from "lucide-react";
-import {cn} from "@/lib/utils";
-import {Marquee} from "@/components/ui/marquee";
+import { cn } from "@/lib/utils";
+import { Marquee } from "@/components/ui/marquee";
 
 
 export default function HeroPage() {
@@ -49,7 +49,7 @@ export default function HeroPage() {
 			desc: "Secure hosting, updates, and 24/7 monitoring for uninterrupted performance.",
 			icon: Settings
 		},
-		{title: "IT Consulting", desc: "Strategic consulting to align IT with your business goals.", icon: Globe},
+		{ title: "IT Consulting", desc: "Strategic consulting to align IT with your business goals.", icon: Globe },
 		{
 			title: "E-Commerce Solutions",
 			desc: "Online stores with secure payment gateways & seamless checkout.",
@@ -68,19 +68,16 @@ export default function HeroPage() {
 	];
 
 	const technologies = [
-		{name: "Java", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg"},
-		{name: "Spring Boot", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg"},
-		{
-			name: "Hibernate",
-			logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/hibernate/hibernate-original.svg"
-		},
-		{name: "React.js", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"},
-		{name: "Next.js", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg"},
-		{name: "Node.js", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"},
-		{name: "Express.js", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg"},
-		{name: "MongoDB", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg"},
-		{name: "React Native", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"},
-		{name: "Expo", logo: "https://avatars.githubusercontent.com/u/12504344?s=200&v=4"},
+		{ name: "Java", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" },
+		{ name: "Spring Boot", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg" },
+		{ name: "Hibernate", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/hibernate/hibernate-original.svg" },
+		{ name: "React.js", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" },
+		{ name: "Next.js", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" },
+		{ name: "Node.js", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" },
+		{ name: "Express.js", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" },
+		{ name: "MongoDB", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" },
+		{ name: "React Native", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" },
+		{ name: "Expo", logo: "https://avatars.githubusercontent.com/u/12504344?s=200&v=4" },
 	];
 
 	const features = [
@@ -97,7 +94,7 @@ export default function HeroPage() {
 			title: "School Website",
 			description:
 				"A modern and responsive school management website with admin panel and student portal.",
-			image: "https://0hf60dalcz7wrhli.public.blob.vercel-storage.com/shreem-images/7.png",
+			image: "/7.webp",
 			features: [
 				"Responsive and SEO-friendly design",
 				"Student and teacher portal with login access",
@@ -111,7 +108,7 @@ export default function HeroPage() {
 			title: "Creative Homes",
 			description:
 				"Creative Homes is a smart real-estate platform that helps users explore, book, and manage properties with ease.",
-			image: "https://0hf60dalcz7wrhli.public.blob.vercel-storage.com/shreem-images/8.png",
+			image: "/8.webp",
 			features: [
 				"Property listing with photos, amenities & pricing",
 				"Builder/Agent dashboard",
@@ -127,7 +124,7 @@ export default function HeroPage() {
 			id: 3,
 			title: "Coffee Shop App",
 			description: "A modern coffee ordering mobile app with seamless browsing, cart, and order history features.",
-			image: "https://0hf60dalcz7wrhli.public.blob.vercel-storage.com/shreem-images/9.png",
+			image: "/9.webp",
 			features: [
 				"Attractive and responsive UI design",
 				"Browse and search coffee varieties",
@@ -140,7 +137,7 @@ export default function HeroPage() {
 			id: 4,
 			title: "Kapdo Ki Duniya ( E-Commerce Website )",
 			description: "A scalable online shopping platform with secure payment integration and a smooth user experience.",
-			image: "https://0hf60dalcz7wrhli.public.blob.vercel-storage.com/shreem-images/10.png",
+			image: "/10.webp",
 			features: [
 				"Paypal payment integration",
 				"Product catalog & cart system",
@@ -155,7 +152,7 @@ export default function HeroPage() {
 			description:
 				"A fast, reliable restaurant billing and POS system designed to manage orders, billing, inventory, and reports with an easy-to-use interface.",
 			image:
-				"https://0hf60dalcz7wrhli.public.blob.vercel-storage.com/shreem-images/6.png",
+				"/6.webp",
 			features: [
 				"Quick bill generation (Dine-in, Takeaway, Delivery)",
 				"GST-compliant invoices with print support",
@@ -179,16 +176,16 @@ export default function HeroPage() {
 	};
 
 	const variants = {
-		enter: {opacity: 0, x: 50},
-		center: {opacity: 1, x: 0},
-		exit: {opacity: 0, x: -50},
+		enter: { opacity: 0, x: 50 },
+		center: { opacity: 1, x: 0 },
+		exit: { opacity: 0, x: -50 },
 	};
 
 
-	const TechCard = ({logo, name}) => (
+	const TechCard = ({ logo, name }) => (
 		<figure
 			className={cn("relative h-28 w-32 rounded-xl border flex flex-col items-center justify-center p-2 bg-white hover:bg-gray-50 border-gray-200")}>
-			<img src={logo} alt={name} className="w-12 h-12 object-contain mb-2"/>
+			<Image src={logo} alt={name} width={48} height={48} className="w-12 h-12 object-contain mb-2" />
 			<figcaption className="text-sm font-medium">{name}</figcaption>
 		</figure>
 	);
@@ -198,22 +195,22 @@ export default function HeroPage() {
 
 			{/* ------------ FLOATING DECORATIVE IMAGES ------------- */}
 			<div className="hidden md:block ">
-				<img src="https://0hf60dalcz7wrhli.public.blob.vercel-storage.com/shreem-images/scribble.png"
-				       alt="Decor" width={80} height={80} className="absolute top-20 left-10 opacity-70 float-soft"/>
-				<img src="https://0hf60dalcz7wrhli.public.blob.vercel-storage.com/shreem-images/paper-plane.png"
-				       alt="Decor" width={90} height={90} className="absolute top-54 left-20 opacity-70 float-soft"/>
-				<img src="https://0hf60dalcz7wrhli.public.blob.vercel-storage.com/shreem-images/responsive.png"
-				       alt="Decor" width={90} height={90} className="absolute top-40 right-10 opacity-70 float-soft"/>
-				<img src="https://0hf60dalcz7wrhli.public.blob.vercel-storage.com/shreem-images/ux-design.png"
-				       alt="Decor" width={90} height={90}
-				       className="absolute bottom-25 right-20 opacity-70 float-soft"/>
-				<img src="https://0hf60dalcz7wrhli.public.blob.vercel-storage.com/shreem-images/game-development.png"
-				       alt="Decor" width={100} height={100}
-				       className="absolute bottom-16 left-24 opacity-70 float-soft"/>
-				<img src="https://0hf60dalcz7wrhli.public.blob.vercel-storage.com/shreem-images/light-bulb.png"
-				       alt="Decor" width={80} height={80} className="absolute top-1/2 right-40 opacity-70 float-soft"/>
-				<img src="https://0hf60dalcz7wrhli.public.blob.vercel-storage.com/shreem-images/coding.png"
-				       alt="Decor" width={100} height={100} className="absolute top-1/2 left-40 opacity-70 float-soft"/>
+				<Image src="/scribble.webp"
+					alt="Decor" width={100} height={100} className="absolute top-20 left-10 opacity-70 float-soft" />
+				<Image src="/paper-plane.webp"
+					alt="Decor" width={113} height={113} className="absolute top-54 left-20 opacity-70 float-soft" />
+				<Image src="/responsive.webp"
+					alt="Decor" width={113} height={113} className="absolute top-40 right-10 opacity-70 float-soft" />
+				<Image src="/ux-design.webp"
+					alt="Decor" width={113} height={113}
+					className="absolute bottom-25 right-20 opacity-70 float-soft" />
+				<Image src="/game-development.webp"
+					alt="Decor" width={125} height={125}
+					className="absolute bottom-16 left-24 opacity-70 float-soft" />
+				<Image src="/light-bulb.webp"
+					alt="Decor" width={100} height={100} className="absolute top-1/2 right-40 opacity-70 float-soft" />
+				<Image src="/coding.webp"
+					alt="Decor" width={125} height={125} className="absolute top-1/2 left-40 opacity-70 float-soft" />
 
 			</div>
 			{/* ------------- MAIN HERO CONTENT ------------- */}
@@ -226,8 +223,8 @@ export default function HeroPage() {
 					build your digital presence together.
 				</p>
 				<div className="flex gap-4 mt-5 flex-wrap">
-					<a href="https://wa.me/918085202613" target="_blank"
-					   className="flex items-center gap-3 bg-white text-black px-5 py-3 rounded-2xl shadow-lg transition hover:bg-gray-100">
+					<a href="https://wa.me/916263662870" target="_blank"
+						className="flex items-center gap-3 bg-white text-black px-5 py-3 rounded-2xl shadow-lg transition hover:bg-gray-100">
 						<div className="w-10 h-10 rounded-xl bg-green-500 flex items-center justify-center">
 							<svg width="22" height="22" fill="#fff" viewBox="0 0 24 24">
 								<path
@@ -240,7 +237,7 @@ export default function HeroPage() {
 						</div>
 					</a>
 					<a href="https://www.instagram.com/shreemsoftwaresolutions/" target="_blank"
-					   className="flex items-center gap-3 bg-white text-black px-5 py-3 rounded-2xl shadow-lg transition hover:bg-gray-100">
+						className="flex items-center gap-3 bg-white text-black px-5 py-3 rounded-2xl shadow-lg transition hover:bg-gray-100">
 						<div
 							className="w-10 h-10 rounded-xl bg-gradient-to-tr from-pink-500 to-purple-600 flex items-center justify-center">
 							<svg width="22" height="22" viewBox="0 0 24 24" fill="#fff">
@@ -256,7 +253,7 @@ export default function HeroPage() {
 				</div>
 
 				<Button
-					onClick={() => window.open("https://wa.me/918085202613", "_blank")}
+					onClick={() => window.open("https://wa.me/916263662870", "_blank")}
 					className="mt-15 px-10 py-7 text-lg font-semibold rounded-2xl bg-blue-600 text-white shadow-md hover:shadow-xl hover:bg-blue-700 hover:-translate-y-1 active:scale-95 transition-all duration-300 cursor-pointer"
 				>
 					Book Free Consultation
@@ -265,11 +262,12 @@ export default function HeroPage() {
 
 				<div className="flex justify-center px-4 md:px-0 mt-4 md:mt-5">
 					<div className="w-full max-w-[700px] md:max-w-[900px]">
-						<img
-							src="https://0hf60dalcz7wrhli.public.blob.vercel-storage.com/shreem-images/Hero-banner.png"
+						<Image
+							src="/Hero-banner.webp"
 							alt="Shreem Software Solutions Illustration"
 							width={950}
 							height={950}
+							sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 70vw"
 							className="
         w-full h-auto
         object-contain
@@ -325,7 +323,7 @@ export default function HeroPage() {
 						>
 							<div
 								className={`w-14 h-14 rounded-xl bg-${item.color}-500/10 flex items-center justify-center`}>
-								<item.Icon className={`text-${item.color}-600`} size={30}/>
+								<item.Icon className={`text-${item.color}-600`} size={30} />
 							</div>
 
 							<div>
@@ -365,16 +363,18 @@ export default function HeroPage() {
 							<AnimatePresence mode="wait">
 								<motion.div
 									key={project.title}
-									initial={{opacity: 0}}
-									animate={{opacity: 1}}
-									exit={{opacity: 0}}
-									transition={{duration: 0.5}}
+									initial={{ opacity: 0 }}
+									animate={{ opacity: 1 }}
+									exit={{ opacity: 0 }}
+									transition={{ duration: 0.5 }}
 									className="relative w-full h-full"
 								>
 									{project.image ? (
-										<img
+										<Image
 											src={project.image}
 											alt={project.title}
+											width={600}
+											height={400}
 											className="object-cover w-full h-full rounded-md transition-all duration-300 ease-out"
 											style={{
 												transform: "perspective(800px) rotateX(0deg) rotateY(0deg) scale(1)",
@@ -433,10 +433,10 @@ export default function HeroPage() {
 							<AnimatePresence mode="wait">
 								<motion.div
 									key={project.title}
-									initial={{opacity: 0, x: 40}}
-									animate={{opacity: 1, x: 0}}
-									exit={{opacity: 0, x: -40}}
-									transition={{duration: 0.5}}
+									initial={{ opacity: 0, x: 40 }}
+									animate={{ opacity: 1, x: 0 }}
+									exit={{ opacity: 0, x: -40 }}
+									transition={{ duration: 0.5 }}
 								>
 									<h2 className="text-4xl md:text-5xl font-extrabold text-black/85">
 										{project.title}
@@ -453,7 +453,7 @@ export default function HeroPage() {
 									</ul>
 
 									<button
-										onClick={() => window.open("https://wa.me/918085202613", "_blank")}
+										onClick={() => window.open("https://wa.me/916263662870", "_blank")}
 										className="mt-6 bg-black text-white px-6 py-3 rounded-xl hover:bg-gray-800 transition cursor-pointer">
 										BOOK FREE CONSULTATION
 									</button>
@@ -520,7 +520,7 @@ export default function HeroPage() {
 			<div className="mt-15 text-center">
 				{/* Heading & Subtext */}
 				<h2 className="text-3xl md:text-4xl font-extrabold text-black/85">
-					What will you get in this <br/> Website Plan?
+					What will you get in this <br /> Website Plan?
 				</h2>
 				<p className="text-gray-500 mt-2 max-w-xl mx-auto px-4 font-inter">
 					Inside this plan, you will get all these deliverables with which you can make your business online
@@ -543,10 +543,10 @@ export default function HeroPage() {
 						<ul className="mb-6 space-y-3 text-left w-full">
 							{features.map((feature, index) => (
 								<li key={index} className="flex items-center gap-3">
-              <span
-	              className="w-5 h-5  rounded-full flex-shrink-0 flex items-center justify-center text-white text-xs font-bold">
-                ✓
-              </span>
+									<span
+										className="w-5 h-5  rounded-full flex-shrink-0 flex items-center justify-center text-white text-xs font-bold">
+										✓
+									</span>
 									<span className="text-white text-sm">{feature}</span>
 								</li>
 							))}
@@ -556,7 +556,7 @@ export default function HeroPage() {
 
 					{/* CTA Button */}
 					<Button
-						onClick={() => window.open("https://wa.me/918085202613", "_blank")}
+						onClick={() => window.open("https://wa.me/916263662870", "_blank")}
 						className=" cursor-pointer px-8 py-4 bg-white text-black text-lg font-semibold rounded-full shadow-md hover:bg-gray-200 hover:shadow-xl transition-all duration-300">
 						Book Free Consultation
 					</Button>
